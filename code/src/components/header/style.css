@@ -1,5 +1,10 @@
 header {
   background: #FFDFE7;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
 }
 
 header a {
@@ -9,7 +14,70 @@ header a {
   padding: 10px;
 }
 
+.hamburger-label {
+  cursor: pointer;
+  padding: 30px;
+}
+
+.hamburger-divs {
+  width: 35px;
+  height: 5px;
+  background-color: red;
+  margin: 6px 0;
+}
+
 .header-grid {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  left: -100%;
+  transition: left 0.3s ease-out;
+}
+
+.hamburger-checkbox{
+  display: none;
+}
+
+.hamburger-checkbox:checked + .header-grid {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+
+@media screen and (min-width: 900px) {
+  .hamburger-label {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px){
+  .hamburger-label {
+    display: block;
+  }
+  .hamburger-checkbox:checked + .header-grid {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .header-grid {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .hamburger-label {
+    display: block;
+  }
+  .hamburger-checkbox:checked + .header-grid {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    }
+  .header-grid {
+    display: none;
+
+  }
 }
