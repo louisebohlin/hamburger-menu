@@ -4,7 +4,7 @@ header {
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  height: auto;
+
 }
 
 header a {
@@ -16,11 +16,11 @@ header a {
 
 .hamburger-label {
   cursor: pointer;
-  padding: 30px;
+  padding-left: 30px;
 }
 
 .hamburger-divs {
-  width: 35px;
+  width: 30px;
   height: 5px;
   background-color: red;
   margin: 6px 0;
@@ -30,8 +30,6 @@ header a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  left: -100%;
-  transition: left 0.3s ease-out;
 }
 
 .hamburger-checkbox{
@@ -60,6 +58,7 @@ header a {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+
   }
   .header-grid {
     display: none;
